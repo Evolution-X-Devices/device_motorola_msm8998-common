@@ -64,13 +64,14 @@ blob_fixups: blob_fixups_user_type = {
         'system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml',
         'system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml',
         'system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.2-java.xml',
-        'system_ext/etc/permissions/qcrilhook.xml',
         'system_ext/etc/permissions/telephonyservice.xml',
         'system_ext/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml',
         'system_ext/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml',
     ): blob_fixup()
-        .regex_replace('product', 'system_ext')
+        .regex_replace('system/product', 'system_ext')
         .regex_replace('xml version="2.0"', 'xml version="1.0"'),
+    'system_ext/etc/permissions/qcrilhook.xml': blob_fixup()
+        .regex_replace('product', 'system_ext'),
     (
         'system_ext/lib/lib-imscamera.so',
         'system_ext/lib/lib-imsvideocodec.so',
