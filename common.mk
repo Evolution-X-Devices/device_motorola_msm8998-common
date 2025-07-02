@@ -113,7 +113,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 
-# GMS
+# GApps
+WITH_GMS := true
+TARGET_USES_PICO_GAPPS := true
+
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 # GNSS
