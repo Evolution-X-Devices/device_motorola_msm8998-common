@@ -107,9 +107,6 @@ TARGET_SYSTEM_EXT_PROP += $(PLATFORM_PATH)/system_ext.prop
 TARGET_SYSTEM_PROP += $(PLATFORM_PATH)/system.prop
 TARGET_VENDOR_PROP += $(PLATFORM_PATH)/vendor.prop
 
-# Recovery
-TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/init/fstab.qcom
-
 # Root
 BOARD_ROOT_EXTRA_SYMLINKS := \
     /mnt/vendor/persist:/persist

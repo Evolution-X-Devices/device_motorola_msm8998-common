@@ -123,16 +123,6 @@ PRODUCT_PACKAGES += \
     ims_ext_common.xml
 
 # Init
-ifneq ($(TARGET_USES_OEM_AS_VENDOR),true)
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.qcom \
-    $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
-else
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/fstab.qcom.oem:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.qcom \
-    $(LOCAL_PATH)/init/fstab.qcom.oem:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
-endif
-
 PRODUCT_PACKAGES += \
     init.mmi.ramdump.rc \
     init.moto.rc \
