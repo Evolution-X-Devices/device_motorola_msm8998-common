@@ -11,6 +11,13 @@ cc_library_static {
 }
 
 prebuilt_etc {
+    name: "init.mmi.dalvik.rc",
+    src: "init.mmi.dalvik.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.mmi.ramdump.rc",
     src: "init.mmi.ramdump.rc",
     sub_dir: "init/hw",
