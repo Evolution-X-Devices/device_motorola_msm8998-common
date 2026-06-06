@@ -6,6 +6,7 @@ allow hal_camera_default vendor_data_file:dir read;
 allow hal_camera_default camera_prop:property_service set;
 allow hal_camera_default sysfs_healthd:dir search;
 allow hal_camera_default sysfs_healthd:file r_file_perms;
+allow hal_camera_default laser_device:chr_file rw_file_perms;
 
 get_prop(hal_camera_default, moto_boot_prop)
 set_prop(hal_camera_default, camera_prop)
